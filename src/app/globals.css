@@ -11,7 +11,7 @@ html {
 }
 
 .service-name {
-  @apply text-rose-600 uppercase block font-semibold text-sm tracking-widest;
+  @apply text-primary uppercase block font-semibold text-sm tracking-widest;
 }
 
 .title {
@@ -23,7 +23,7 @@ html {
 }
 
 .team-card:hover :is(h2, p) {
-  color: #e11d48;
+  color: #FFBF48;
 }
 
 .team-card:hover .icons {

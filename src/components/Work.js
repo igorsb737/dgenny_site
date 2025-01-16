@@ -17,10 +17,10 @@ const WorkCard = ({ num, title }) => {
 
 const Work = () => {
   return (
-    <section className="w-full bg-rose-500 text-white bg-[url('/work/workbg.png')] bg-cover bg-no-repeat bg-center">
+    <section className="w-full bg-primary text-white bg-[url('/work/workbg.png')] bg-cover bg-no-repeat bg-center">
       <div className="flex flex-col gap-10 lg:gap-16 container mx-auto md:px-16 px-5 py-12 sm:py-20 md:py-36">
         <div>
-          <span className="uppercase block font-semibold text-sm tracking-widest text-center text-rose-200">
+          <span className="uppercase block font-semibold text-sm tracking-widest text-center text-primary/80">
             WHATS THE FUNCTION
           </span>
           <h2 className="text-2xl sm:text-4xl font-semibold my-3 text-center ">

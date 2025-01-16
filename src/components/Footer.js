@@ -6,6 +6,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -13,8 +14,14 @@ const Footer = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
-            <Link href={"/"} className="text-3xl">
-              <span className="text-rose-600">N</span>aseem.
+            <Link href={"/"}>
+              <Image 
+                src="/logo-dgenny.png"
+                alt="DGenny Logo"
+                width={150}
+                height={40}
+                className="h-auto w-auto"
+              />
             </Link>
             <p className="max-w-xs mt-4 text-sm">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
@@ -25,25 +32,25 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=100017192357822&sk"
                 target="_blank"
               >
-                <FacebookOutlinedIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
+                <FacebookOutlinedIcon className="hover:text-primary hover:-translate-y-1 transition-all" />
               </Link>
               <Link href="https://github.com/NaseemKhan005" target="_blank">
-                <GitHubIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
+                <GitHubIcon className="hover:text-primary hover:-translate-y-1 transition-all" />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/naseem-khan-275275258/"
                 target="_blank"
               >
-                <LinkedInIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
+                <LinkedInIcon className="hover:text-primary hover:-translate-y-1 transition-all" />
               </Link>
               <Link href="https://twitter.com/NaseemK69128903" target="_blank">
-                <TwitterIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
+                <TwitterIcon className="hover:text-primary hover:-translate-y-1 transition-all" />
               </Link>
               <Link
                 href="https://www.instagram.com/naseem_khan005/"
                 target="_blank"
               >
-                <InstagramIcon className="hover:text-rose-600 hover:-translate-y-1 transition-all" />
+                <InstagramIcon className="hover:text-primary hover:-translate-y-1 transition-all" />
               </Link>
             </div>
           </div>
@@ -167,7 +174,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <p className="mt-8 text-xs">© 2022 Naseem Khan - All rights reserved</p>
+        <p className="mt-8 text-xs">© 2024 DGenny - Todos os direitos reservados</p>
       </div>
     </footer>
   );
