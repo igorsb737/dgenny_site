@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useModal } from "@/context/ModalContext";
 
 const CoreFeatures = () => {
+  const { openModal } = useModal();
   return (
     <section className="container mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center lg:gap-20 gap-14">
       <div className="flex flex-col gap-2 flex-1">
@@ -13,7 +15,10 @@ const CoreFeatures = () => {
         <p className="text-lg leading-loose">
         Você já deve ter escutado isso "Para vender bem, precisa comprar bem!" A DGenny vai transformar a realidade das suas compras, mesmo que a sua empresa ainda nem tenha departamento de compras.
         </p>
-        <button className="mt-5 w-fit md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-[#07325B] hover:border-[#07325B] hover:bg-transparent hover:text-[#07325B] rounded-full">
+        <button 
+          onClick={openModal}
+          className="mt-5 w-fit md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-[#07325B] hover:border-[#07325B] hover:bg-transparent hover:text-[#07325B] rounded-full"
+        >
           Garanta Acesso Antecipado
         </button>
       </div>

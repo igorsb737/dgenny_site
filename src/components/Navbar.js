@@ -9,11 +9,13 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { useEffect, useRef, useState } from "react";
+import { useModal } from "@/context/ModalContext";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [selectedItem, setSelectedItem] = useState("/");
   const navbar = useRef();
+  const { openModal } = useModal();
 
   useEffect(() => {
     window.onscroll = () => {
@@ -28,15 +30,15 @@ const Navbar = () => {
   return (
     <div
       ref={navbar}
-      className="bg-white text-black w-full z-50 fixed top-0 left-0 py-4 mb-10"
+      className="bg-white text-black w-full z-50 fixed top-0 left-0 py-2 mb-10"
     >
       <div className="container px-5 md:px-16 flex items-center justify-between mx-auto">
         <Link href={"/"}>
           <Image 
             src="/logo-dgenny.png"
             alt="DGenny Logo"
-            width={150}
-            height={40}
+            width={126}
+            height={34}
             className="h-auto w-auto"
           />
         </Link>
@@ -51,6 +53,7 @@ const Navbar = () => {
             >
               <CloseOutlinedIcon />
             </button>
+            {/* Menus temporariamente escondidos
             {["home", "features", "pricing", "testimonial"].map((link) => (
               <li
                 key={link}
@@ -61,7 +64,7 @@ const Navbar = () => {
               >
                 <Link href={`#${link}`}>{link}</Link>
               </li>
-            ))}
+            ))} */}
             <div className="md:hidden mx-auto absolute bottom-16 left-1/2 -translate-x-1/2 flex gap-3">
               <Link
                 href="https://www.facebook.com/profile.php?id=100017192357822&sk"
@@ -89,8 +92,11 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-4 md:gap-2 lg:gap-4">
-          <button className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-primary border-primary hover:border-primary hover:bg-primary hover:text-white rounded-full">
-            <Link href={"#pricing"}>Começe Aqui</Link>
+          <button 
+            onClick={openModal}
+            className="capitalize text-sm sm:text-base border-2 hover:border-2 font-semibold sm:py-3 py-2 px-3 sm:px-6 text-primary border-primary hover:border-primary hover:bg-primary hover:text-white rounded-full"
+          >
+            Começe Aqui
           </button>
           <button
             aria-label="menu"

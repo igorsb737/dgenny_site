@@ -1,7 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useModal } from "@/context/ModalContext";
 
 const HeroSection = () => {
+  const { openModal } = useModal();
   return (
     <section
       className="text-center flex flex-col gap-10 sm:gap-20 items-center justify-center h-full mt-28 sm:mt-32 md:mt-44"
@@ -15,10 +16,11 @@ const HeroSection = () => {
         <p className="text-lg leading-normal sm:leading-loose my-4 md:my-6">
           Aumente seu lucro em até 3x com a única IA que encontra o fornecedor ideal, conversa, orça, negocia o melhor valor e compra para você
         </p>
-        <button className="md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-[#07325B] hover:border-[#07325B] hover:bg-transparent hover:text-[#07325B] rounded-full">
-          <Link href="https://github.com/NaseemKhan005" target="_blank">
-            Garanta Acesso Antecipado
-          </Link>
+        <button 
+          onClick={openModal}
+          className="md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-[#07325B] hover:border-[#07325B] hover:bg-transparent hover:text-[#07325B] rounded-full"
+        >
+          Garanta Acesso Antecipado
         </button>
       </div>
       <div className="w-full relative">

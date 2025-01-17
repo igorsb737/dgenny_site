@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "waitlist": {
+      ".indexOn": ["email", "whatsapp"],
+      ".read": true,
+      ".write": true
+    }
+  }
+}
