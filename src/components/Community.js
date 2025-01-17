@@ -19,7 +19,8 @@ const Card = ({ imgSrc, title }) => {
   );
 };
 
-const Community = () => {
+const Community = ({ isVisible = true }) => {
+  if (!isVisible) return null;
   return (
     <section className="container mx-auto px-16 lg:px-32">
       <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-2 lg:gap-16 text-center mx-auto">

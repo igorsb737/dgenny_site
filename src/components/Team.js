@@ -37,7 +37,8 @@ const TeamCard = ({ imgSrc, name, title }) => {
   );
 };
 
-const Team = () => {
+const Team = ({ isVisible = false }) => {
+  if (!isVisible) return null;
   return (
     <section className="container mx-auto px-5 md:px-16 lg:px-24">
       <span className="service-name text-center ">OUR TEAM</span>

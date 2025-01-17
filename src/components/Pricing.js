@@ -50,7 +50,7 @@ const Pricing = () => {
   const [plan, setPlan] = useState("Monthly Plan");
   return (
     <section
-      className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5"
+      className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5 hidden"
       id="pricing"
     >
       <div>

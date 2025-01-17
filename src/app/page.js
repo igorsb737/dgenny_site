@@ -18,13 +18,13 @@ export default function Home() {
       <Features />
       <Services />
       <QualityFeatures />
-      <CoreFeatures />
       <Work />
-      <Pricing />
-      <Team />
-      <Testimonials />
+      <CoreFeatures />
       <Subscribe />
-      <Community />
+      <Pricing />
+      <Team isVisible={false} />
+      <Testimonials isVisible={false} />
+      <Community isVisible={false} />
     </div>
   );
 }

@@ -32,7 +32,7 @@ html {
 }
 
 input::placeholder {
-  color: #e11d48;
+  color: #333333;
 }
 
 @keyframes playPluse {

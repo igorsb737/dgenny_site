@@ -39,7 +39,8 @@ const Card = ({ star, title, imgSrc }) => {
   );
 };
 
-const Testimonials = () => {
+const Testimonials = ({ isVisible = true }) => {
+  if (!isVisible) return null;
   return (
     <section
       className="relative container mx-auto px-5 md:px-16 flex flex-col gap-5"
