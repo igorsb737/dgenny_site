@@ -7,10 +7,6 @@ const WorkCard = ({ num, title }) => {
         {num}
       </span>
       <h2 className="text-xl font-semibold leading-relaxed">{title}</h2>
-      <p className="leading-loose">
-        Get your blood tests delivered at home collect a sample from the your
-        blood tests.
-      </p>
     </div>
   );
 };
@@ -43,7 +39,7 @@ const Work = () => {
           <div className="relative">
             <WorkCard
               num="02"
-              title="Assembly retrieves funds from your account"
+              title="Pede Orçamento"
             />
             <Image
               src={"/work/arrow.svg"}
@@ -54,7 +50,7 @@ const Work = () => {
             />
           </div>
           <div className="relative">
-            <WorkCard num="03" title="Assembly initiates disbursement" />
+            <WorkCard num="03" title="Negocia com o Fornecedor" />
             <Image
               src={"/work/arrow.svg"}
               width={205}
@@ -63,7 +59,7 @@ const Work = () => {
               className="hidden absolute top-2 left-[4.7rem] xl:block"
             />
           </div>
-          <WorkCard num="04" title="Customer receives funds payment" />
+          <WorkCard num="04" title="Finaliza a Negociação" />
         </div>
       </div>
     </section>
